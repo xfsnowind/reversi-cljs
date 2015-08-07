@@ -38,7 +38,7 @@
                         :incremental  true
                         :figwheel     {:on-jsload      "reversi-cljs.core/trigger-synthetic-om-update!"}
                         :compiler     {:main           "reversi-cljs.core"
-                                       :output-to      "resources/public/js/reversi-cljs.js"
+                                       :output-to      "resources/public/js/reversi.js"
                                        :asset-path     "js"
                                        :output-dir     "resources/public/js/"
                                        :optimizations  :none
@@ -49,14 +49,14 @@
                         :source-paths ["src/cljs"]
                         :compiler     {:optimizations :advanced
                                        :pretty-print  false
-                                       :output-to     "www/js/reversi-cljs.js"}}]}
+                                       :output-to     "www/js/reversi.js"}}]}
 
   :aliases {"prod"
             ^{:doc "Prepares a folder, www, ready for copying to production server. Includes polyfills and optimizations."}
             ["do"
              ["sass" "once"]
              ["cljsbuild" "once" "prod"]
-             ["shell" "autoprefixer" "-b" "last 2 versions"  "-o" "www/css/reversi-cljs.css" "resources/public/css/reversi-cljs.css"]]
+             ["shell" "autoprefixer" "-b" "last 2 versions"  "-o" "www/css/reversi.css" "resources/public/css/reversi.css"]]
 
             "dev"
             ^{:doc "Builds the project and opens a figwheel repl. Open http://localhost:3449 to use. Sourcemaps and pretty-print"}
