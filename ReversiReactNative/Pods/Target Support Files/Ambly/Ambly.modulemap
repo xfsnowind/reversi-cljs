@@ -1,0 +1,6 @@
+module Ambly {
+  umbrella header "Ambly-umbrella.h"
+
+  export *
+  module * { export * }
+}
